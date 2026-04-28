@@ -1,0 +1,242 @@
+.product-section {
+  padding: 48px 0 56px;
+}
+.product-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* GALLERY */
+.gallery { position: sticky; top: 96px; }
+.gallery-main {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  margin-bottom: 14px;
+  aspect-ratio: 1;
+}
+.main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fadeIn 0.35s ease;
+}
+.gallery-badge {
+  position: absolute;
+  top: 18px; left: 18px;
+  z-index: 2;
+  background: var(--red-sale);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.gallery-thumbs {
+  display: flex;
+  gap: 10px;
+}
+.gallery-thumb {
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+.gallery-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.gallery-thumb:hover { transform: translateY(-2px); border-color: var(--gold-dark); }
+.gallery-thumb.active { border-color: var(--gold); }
+
+/* INFO */
+.product-brand {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.product-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--cream);
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+.product-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.stars { color: #f59e0b; font-size: 15px; letter-spacing: 1px; }
+.rating-num { font-weight: 600; color: var(--cream); }
+.rating-sep { color: var(--text-light); }
+.rating-count { color: var(--text-mid); }
+.free-ship { color: var(--green); font-size: 12px; }
+
+.price-block { margin-bottom: 24px; }
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+.price-sale { font-size: 1.8rem; font-weight: 700; color: var(--cream); }
+.price-original { font-size: 1rem; color: var(--text-light); text-decoration: line-through; }
+.price-badge {
+  background: rgba(232,93,66,0.15);
+  color: var(--red-sale);
+  border: 1px solid rgba(232,93,66,0.3);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+.price-note { font-size: 12px; color: var(--text-light); }
+
+.size-label { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-mid); margin-bottom: 10px; }
+.size-options { display: flex; gap: 10px; margin-bottom: 28px; }
+.size-btn {
+  padding: 10px 24px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text-mid);
+  font-size: 14px;
+  transition: all 0.2s;
+}
+.size-btn:hover { border-color: var(--gold-dark); color: var(--cream); }
+.size-btn.active { border-color: var(--gold); color: var(--gold); background: rgba(201,150,90,0.08); }
+
+.cta-buttons { display: flex; gap: 12px; margin-bottom: 28px; flex-wrap: wrap; }
+.btn-primary {
+  flex: 1;
+  min-width: 180px;
+  padding: 16px 28px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #c9965a, #e8b87a);
+  color: var(--bg);
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,150,90,0.35); }
+.btn-primary:active { transform: scale(0.98); }
+.cart-msg {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 11px;
+  background: rgba(255,255,255,0.2);
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+.btn-secondary {
+  flex: 1;
+  min-width: 180px;
+  padding: 16px 28px;
+  border-radius: 14px;
+  background: transparent;
+  border: 1.5px solid var(--gold);
+  color: var(--gold);
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.btn-secondary:hover { background: rgba(201,150,90,0.1); transform: translateY(-2px); }
+
+.guarantee-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text-mid);
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.pill:hover { border-color: var(--gold-dark); color: var(--cream2); }
+.pill-icon { font-size: 13px; }
+
+.desc-block { margin-bottom: 28px; padding-top: 24px; border-top: 1px solid var(--border2); }
+.desc-block h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 12px;
+  letter-spacing: 0.01em;
+}
+.desc-block p { font-size: 14px; color: var(--text-mid); line-height: 1.8; }
+
+.benefits-list { display: flex; flex-direction: column; gap: 12px; }
+.benefits-list li { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--text-mid); line-height: 1.6; }
+.benefit-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); margin-top: 6px; flex-shrink: 0; }
+.benefits-list strong { color: var(--cream2); }
+
+.ingredients-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.ingredient-chip {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 13px;
+  color: var(--text-mid);
+  transition: border-color 0.2s;
+}
+.ingredient-chip:hover { border-color: var(--gold-dark); }
+
+.features-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.feature-tag {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-light);
+  font-size: 12px;
+  padding: 5px 11px;
+  border-radius: 6px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.feature-tag:hover { border-color: var(--gold-dark); color: var(--cream2); }
+
+@media (max-width: 900px) {
+  .product-inner { grid-template-columns: 1fr; gap: 36px; }
+  .gallery { position: static; }
+}

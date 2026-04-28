@@ -1,0 +1,16 @@
+.breadcrumb {
+  border-bottom: 1px solid var(--border2);
+}
+.breadcrumb-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 12px 32px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-light);
+}
+.breadcrumb-inner a:hover { color: var(--gold); }
+.sep { color: var(--text-light); opacity: 0.5; }
+.current { color: var(--text-mid); }

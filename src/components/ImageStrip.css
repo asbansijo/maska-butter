@@ -1,0 +1,21 @@
+.strip-section { padding: 0 0 56px; }
+.strip-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.strip-img {
+  width: 100%;
+  border-radius: 20px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  transition: transform 0.3s, border-color 0.3s;
+}
+.strip-img:hover { transform: scale(1.02); border-color: var(--gold-dark); }
+@media (max-width: 700px) {
+  .strip-inner { grid-template-columns: 1fr; }
+}
